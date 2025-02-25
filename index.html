@@ -2,62 +2,129 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>Michael Fiocco | Portfolio</title>
-    <meta name="description" content="SiteBase: a minimalistic HTML + CSS + JS base front-end framework for simple web site projects.">
-
-    <!-- VIEWPORT FOR MOBILE -->
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <!-- ADD ADOBE FONTS -->
+    <link rel="stylesheet" href="https://use.typekit.net/tzt7eec.css">
 
     <!-- MAIN CSS FILE -->
-    <link href="css/style.css" rel="stylesheet" type="text/css">
-
-     <!-- GOOGLE FONTS -->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Permanent+Marker&display=swap" rel="stylesheet">
-     
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body id="top" class="page-home">
+    <div class="left-side">
+        <header class="site-header toggle-nav animated ssticky" data-navstate="closed">
+            <div class="container">
+                <div class="site-id hidden">
+                    <h1>
+                        <a href="index.html">MiCHAEL FiOCCO</a>
+                    </h1>
+                </div>
+                <nav class="site-nav">
+                    <ul class="nav">
+                        <li class="site-logo">
+                            <a href="index.html"><img src="img/mf_logo.svg" alt="logo" width="70" height="50" /><span class="hidden">MiCHAEL FiOCCO</span></a></li>
+                        <li><a href="work.html">work</a></li>
+                        <li><a href="about.html">about</a></li>
+                    </ul>
+                </nav>
+                <div class="top-nav-logo">
+                </div>   
+            </div>
+        </header>
 
-    <header class="site-header toggle-nav animated ssticky" data-navstate="closed">
-        <div class="container">
-            <div class="site-id">
-                <h1>
-                    <a href="index.html">MiCHAEL FiOCCO</a>
-                    <!-- <span class="hidden-sm"> | Portfolio</span> -->
-                </h1>
+        <!-- <header class="site-header toggle-nav animated ssticky" data-navstate="closed">
+            <div class="container">
+                <div class="site-id hidden">
+                    <h1>
+                        <a href="index.html">MiCHAEL FiOCCO</a>
+                    </h1>
+                </div>
+                <nav class="site-nav">
+                    <div class="menu-button navicon">Menu</div>
+                    <ul class="nav">
+                        <li><a href="about.html">about</a></li>
+                        <li><a href="work.html">work</a></li>
+                    </ul>
+                </nav>
+                <div class="top-nav-logo">
+                    <a href="index.html"><img src="img/mf_logo.svg" alt="logo" width="200" height="100" /></a>
+                </div>   
             </div>
-            <div class="top-nav-logo">
-                <a href="index.html"><img src="img/mf_logo.svg" alt="logo" width="200" height="100"/></a>
+        </header> -->
+
+        <section class="hero text-centered">
+            <div class="container">
+                    <h1>Hi, I'm Michael!</h1>
+                    <h5 class="main-hero">I'm excited to share my work with you—thanks for stopping by!</h5>
+                    <a class="button alt" href="about.html#contact">Let's Connect!</a>
             </div>
+        </section>
+    </div>
+    <div class="right-side">
+        <!-- <header class="site-header toggle-nav animated ssticky" data-navstate="closed">
             <nav class="site-nav">
                 <div class="menu-button navicon">Menu</div>
                 <ul class="nav">
                     <li><a class="scroll" href="#work">work</a></li>
-                    <li><a href="about.html">about</a></li>
                 </ul>
             </nav>
-        </div>
-    </header>
+        </header> -->
 
-    <main class="site-main fade-and-move-in">
-        <section class="hero text-centered">
-            <div class="container">
-                <h1>Hi, I'm Michael!</h1>
-                <h5 class="main-hero">I'm excited to share my work with you—thanks for stopping by!</h5>
-                <a class="button alt" href="about.html#contact">Let's Connect!</a>
+        <section class="parallax-section" id="parallax">
+            <div class="container" id="section-container">
+              <h1>PROJECT 1</h1>
             </div>
-            <!-- <div class="hero-image">
-                <img src="img/ocean.png" alt="Puerto Escondido Logo" width="2000" height="2000" class="vert-move">
-            </div>    -->
+        </section>
+       <!-- second section -->
+        <section class="parallax-section" id="parallax2">
+            <div class="container" id="section-container">
+              <h1>PROJECT 2</h1>
+            </div>
+        </section>
+        <!-- third section -->
+        <section class="parallax-section" id="parallax3">
+            <div class="container" id="section-container">
+              <h1>PROJECT 3</h1>
+            </div>
+        </section>
+        <!-- fourth section -->
+        <section class="parallax-section" id="parallax4">
+            <div class="container" id="section-container">
+              <h1>PROJECT 4</h1>
+            </div>
+        </section>
+         <!-- fifth section -->
+        <section class="parallax-section" id="parallax5">
+            <div class="container" id="section-container">
+              <h1>PROJECT 5</h1>
+            </div>
+        </section>
+        <!-- sixth section -->
+        <section class="parallax-section" id="parallax6">
+            <div class="container" id="section-container">
+              <h1>PROJECT 6</h1>
+            </div>
+        </section>
+        <!-- seventh section -->
+        <section class="parallax-section" id="parallax7">
+            <div class="container" id="section-container">
+              <h1>PROJECT 7</h1>
+            </div>
+        </section>
+        <!-- eighth section -->
+        <section class="parallax-section" id="parallax8">
+            <div class="container" id="section-container">
+              <h1>PROJECT 8</h1>
+            </div>
         </section>
         
-        <section id="work">
+        <!-- <section id="work">
             <div class="container">
-                <h3 class="section-title"></h3>
 
+                
                 <div class="row">
                     
                     <div class="column one-half">
@@ -79,34 +146,42 @@
                         <a href="typography.html"><img src="img/EamesLayout_mockup.jpg" alt="Typography layout mockup" width="1500" height="1500"/></a>
                     </div>   
                 </div>
-                
+                    
             </div>
-        </section>
-
-       
-
-
-    </main>
+        </section> -->
+    </div>
 
     <footer class="site-footer">
+            <div class="container">
+                <nav class="footer-nav">
+                    <ul>
+                        <li><a href="#">Resume</a></li>
+                        <li><a href="#">Linkedin</a></li>
+                        <li><a href="#">Github</a></li>
+                    </ul>
+                </nav>
+            </div>
+    </footer>
+    <!-- <footer class="site-footer">
         <div class="container">
             <nav class="site-nav">
                 <ul>
                     <li><a href="index.html"><img src="img/mf_logo.svg" alt="logo" width="50" height="50"/></a></li>
-                    <li class="selected">
-                        <a href="index.html#work" class="selected">work</a>
-                    </li>
+                    <li><a href="index.html#work" class="selected">work</a></li>
                     <li><a href="about.html">about</a></li>
                 </ul>
             </nav>
         </div>
-    </footer>
+    </footer> -->
 
-   <!-- SCROLL JS -->
-   <script src="js/scroll.js"></script>
- 
-   <!-- MAIN JS -->
-   <script src="js/script.js"></script>
+    <!-- SCROLL JS -->
+    <script src="js/scroll.js"></script>
+    
+    <!-- MAIN JS -->
+    <script src="js/script.js"></script>
+
+    <!-- PARALLAX JS -->
+    <script src="js/parallax.js"></script>
 
 </body>
 

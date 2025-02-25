@@ -35,7 +35,7 @@
 
 body {
     font-size: 87.5%; /* 14px */
-    font-family: "Open Sans", sans-serif;
+    font-family: "Miller Text", serif;
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
@@ -55,7 +55,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Neue Haas Grotesk", sans-serif;
     margin: 0.5em 0;
 }
 
@@ -120,7 +120,7 @@ em {
 }
 
 /* LINKS */
-a {
+/* a {
     color: rgb(0, 0, 0);
     text-decoration: none;
 }
@@ -128,7 +128,54 @@ a {
 a:hover {
     color:#7a9787;
     text-decoration: underline;
-}
+} */
+
+a {
+    background-image: linear-gradient(
+      to right,
+      #7c9fab,
+      #31505b 50%,
+      #252525 50%
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 5px 0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.6s ease-in-out;
+  }
+  
+  /* a:before{
+    content: '';
+    background: #446d64;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+  } */
+  
+  a:hover {
+   background-position: 0;
+  }
+  
+  a:hover::before{
+    width: 100%;
+  }
+  
+  /* Presentational Styles */
+  body {
+      display: grid;
+    font-family: 'Poppins', sans-serif;
+    font-size: 27px;
+    font-weight: 700;
+    height: 100vh;
+      place-items: center;
+  }
 
 /* HELPERS */
 .text-centered {
@@ -179,6 +226,8 @@ img {
 .top-nav-logo img {
     max-width: 100px;
     margin: 1em 0;
+    position: fixed;
+    border: 1px solid red;
 }
 
 
@@ -231,6 +280,10 @@ form input[type=submit]:hover {
 
 body { margin: 0;}
 
+body {
+    min-height: 100svh;
+}
+
 /* CONTAINER */
 .container {
     max-width: 1500px;
@@ -238,9 +291,30 @@ body { margin: 0;}
     /* padding: 0 2%; */
 }
 
-.containers {
+.container {
     padding: 0 1em; 
 }
+
+.left-side {
+    width: 50%;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff; /* Adjust as needed */
+    justify-content: center;
+}
+
+.right-side {
+    width: 50%;
+    height: 100vh;
+    overflow-y: auto;
+    margin-left: 50%;
+    background-color: #ffffff;
+}
+
 
 /* MEDIA QUERIES */
 
@@ -360,7 +434,13 @@ section
 /* SITE FOOTER */
 
 .site-footer {
-    padding: 4em 0 2em 0;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 50%;
+    background-color: transparent;
+    color: #fff;
+    padding: 10px;
 }
 
 /* LOGO AREA */
@@ -377,8 +457,55 @@ section
 }
 
 /* SITE NAV */
+.site-nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
 
 .site-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.site-nav li:nth-child(0) {order: 1;}
+.site-nav li:nth-child(1) {order: 2;}
+.site-nav li:nth-child(2) {order: 3;}
+
+.site-nav li:nth-child(1) {
+    background-color: white;
+    border-bottom-right-radius: 30%;
+}
+
+.site-nav li:nth-child(2) {
+    background-color: white;
+    border-bottom-left-radius: 35%;
+}
+.site-nav li:nth-child(3) {
+    background-color: white;
+    border-bottom-right-radius: 35%;
+}
+
+.site-nav a {
+    display: block;
+    padding: 1em;
+    color: rgba(0, 0, 0, .5);
+    font-family: "all round gothic", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.site-nav .menu-button {
+    display: none;
+}
+
+/* FOOTER NAV */
+.footer-nav ul {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -386,18 +513,14 @@ section
     justify-content: center;
 }
 
-.site-nav a {
+.footer-nav a {
     display: block;
     padding: 1em;
     color: rgba(0, 0, 0, .5);
-    font-family: "Comfortaa", sans-serif;
+    font-family: "all round gothic", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 100;
+    font-weight: 300;
     font-style: normal;
-}
-
-.site-nav .menu-button {
-    display: none;
 }
 
 /* SECTIONS */
@@ -407,12 +530,14 @@ section {
 
 /* HERO */
 
-
-
 .hero {
-    padding: 1em 4%;
-    background-color: rgba(0,0,0,.1);
+    background-color: transparent;
+    color: #373737;
     text-align: center;
+    padding: 1em 0 1em 0;
+    /* border-top: none; */
+    
+    /* margin-bottom: 1.5em; */
 
 }
 
@@ -514,16 +639,10 @@ section {
     margin-bottom: 3em;
   }
   
-  .hero {
-    background: rgba(255, 255, 255, 0.05);
-    border-top: none;
-    padding: 1em 0 1em 0;
-    /* margin-bottom: 1.5em; */
-  }
   .hero h1,
   .hero h2 {
-    font-family: "Permanent Marker", cursive;
-    font-weight: 400;
+    font-family: "Neue Haas Grotesk", sans-serif;
+    font-weight: 100;
     font-style: normal;
     font-size: 3em;
     line-height: 1.1em;
@@ -965,3 +1084,66 @@ img.vert-move {
 .subpage-project .row > .column {
     background-image: red;
 }
+
+/* PARALLAX */
+
+.parallax-section {
+    min-height: 500px;
+    background-color: rgb(233, 233, 233);
+    background-attachment: fixed;
+    background-position-y: -0.2;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    text-align: center;
+    color: white;
+    transition: 0s linear;
+    transition-property: background-position;
+  }
+  
+  #parallax {
+    background-image: url(../img/Tourism_Image.jpg);
+   
+  }
+
+  #parallax2 {
+    background-image: url(../img/Banner_mockup.jpg);
+ 
+  }
+  
+  #parallax3 {
+    background-image: url(../img/mulit-jar-pink.jpg);
+ 
+  }
+  
+  #parallax4 {
+    background-image: url(../img/pairing-animation.png);
+    
+  }
+  
+  #parallax5 {
+    background-image: url(../img/medley-mockup.jpg);
+ 
+  }
+  
+  #parallax6 {
+    background-image: url(../img/k9-mockup2.jpg);
+    
+  }
+  #parallax7 {
+    background-image: url(../img/EamesLayout_mockup.jpg);
+
+  }
+  
+  #parallax8 {
+    background-image: url('https://images.unsplash.com/photo-1613049521055-d377898eb145?q=80&w=3590&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    
+  }
+
+  
+  #section-container {
+    padding-top: 16%
+  }

@@ -1,24 +1,37 @@
-document.addEventListener('DOMContentLoaded', function() {
 
-    //TOGGLE NAV MOBILE MENU FOR SMALL SCREENS
-    const menubutton = document.querySelector('.menu-button');
-    const menunav = document.querySelector('.toggle-nav');
-    menubutton.addEventListener('click', function () {
-        if (menunav.getAttribute('data-navstate') === 'open') {
-            // If true do this
-            menunav.setAttribute('data-navstate', 'closed');
-        } else {
-            // else (if false) do this
-            menunav.setAttribute('data-navstate', 'open');
-        };
-    })
+// TOGGLE MENU
+const toggleMenu = document.querySelector('.toggle-menu');
+const toggleMenuButton = document.querySelector('.site-menu-button');
+const toggleMenuLinks = document.querySelectorAll('.toggle-menu a');
+toggleMenuButton.onclick = function() {
+    if (toggleMenu.getAttribute('data-menustate') === 'closed') {
+      // if closed, open it    
+      toggleMenu.setAttribute('data-menustate','open');
+    } else {
+      // else, close it
+      toggleMenu.setAttribute('data-menustate','closed');
+    }
+};
+// CLOSE THE MENU WHEN A USER CLICKS ON ANY LINK
+toggleMenuLinks.forEach((el) => {
+  el.onclick = () => {
+    toggleMenu.setAttribute('data-menustate','closed');
+  }
+});
 
-    //TOGGLE NAV MOBILE MENU SCROLL LINKS FOR SMALL SCREENS
-    var stickynavlinks = document.querySelectorAll(".sticky nav a");
-    var j;
-    for (j = 0; j < stickynavlinks.length; j++) {
-        stickynavlinks[j].onclick = function() {
-            menunav.setAttribute('data-navstate', 'closed');
-        };
-    };
+// ON SCROLL ANIMATION
+// CHANGE ACTIVE STATE FOR ALL ELEMENTS WITH .oberve-me CLASS
+const myobserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.setAttribute("data-viewstate", "active");
+    } else {
+      entry.target.setAttribute("data-viewstate", "inactive");
+    };   
+  });  
+});
+
+const mytargets = document.querySelectorAll('.observe-me');
+mytargets.forEach((el) => {
+    myobserver.observe(el);
 });

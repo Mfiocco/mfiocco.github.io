@@ -2,52 +2,41 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>Michael Fiocco | Portfolio</title>
-    <meta name="description" content="SiteBase: a minimalistic HTML + CSS + JS base front-end framework for simple web site projects.">
-
-    <!-- VIEWPORT FOR MOBILE -->
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <!-- ADD ADOBE FONTS -->
+    <link rel="stylesheet" href="https://use.typekit.net/tzt7eec.css">
 
     <!-- MAIN CSS FILE -->
-    <link href="css/style.css" rel="stylesheet" type="text/css">
-
-     <!-- GOOGLE FONTS -->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Permanent+Marker&display=swap" rel="stylesheet">
-     
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
-<body id="top" class="page-sub">
-
+<body>
     <header class="site-header toggle-nav animated ssticky" data-navstate="closed">
         <div class="container">
-            <div class="site-id">
+            <div class="site-id hidden">
                 <h1>
                     <a href="index.html">MiCHAEL FiOCCO</a>
-                    <!-- <span class="hidden-sm"> | Portfolio</span> -->
                 </h1>
             </div>
-            <div class="top-nav-logo">
-                <a href="index.html"><img src="img/mf_logo.svg" alt="logo" width="200" height="100"/></a>
-            </div>
             <nav class="site-nav">
-                <div class="menu-button navicon">Menu</div>
                 <ul class="nav">
-                    <li class="selected">
-                        <a href="index.html#work" class="selected">work</a>
-                    </li>
+                    <li class="site-logo">
+                        <a href="index.html"><img src="img/mf_logo.svg" alt="logo" width="70" height="50" /><span class="hidden">MiCHAEL FiOCCO</span></a></li>
+                    <li><a href="work.html">work</a></li>
                     <li><a href="about.html">about</a></li>
                 </ul>
             </nav>
+            <div class="top-nav-logo">
+            </div>   
         </div>
     </header>
 
     <main class="site-main fade-and-move-in">
         <section class="containers">
             <div class="hero text-centered">
-                <h1 class="about-title">Get to know me!</h1>
+                <!-- <h1 class="about-title">Get to know me!</h1> -->
             </div>
             <div class="row">
                 <div class="container one-half">
@@ -77,26 +66,4 @@
     
     </main>
 
-    <footer class="site-footer">
-        <div class="container">
-            <nav class="site-nav">
-                <ul>
-                    <li><a href="index.html"><img src="img/mf_logo.svg" alt="logo" width="50" height="50"/></a></li>
-                    <li class="selected">
-                        <a href="index.html#work" class="selected">work</a>
-                    </li>
-                    <li><a href="about.html">about</a></li>
-                </ul>
-            </nav>
-        </div>
-    </footer>
-
-   <!-- SCROLL JS -->
-   <script src="js/scroll.js"></script>
- 
-   <!-- MAIN JS -->
-   <script src="js/script.js"></script>
-
 </body>
-
-</html>

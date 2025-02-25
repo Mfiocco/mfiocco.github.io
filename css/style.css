@@ -106,6 +106,13 @@ p {
     text-wrap: pretty;
 }
 
+p.tab {
+    margin: 0 0 1em 0;
+    max-width: 60ch;
+    text-wrap: pretty;
+    padding: 0 0 0 2em;
+}
+
 .centered p {
     margin-left: auto;
     margin-right: auto;
@@ -169,12 +176,12 @@ a {
   
   /* Presentational Styles */
   body {
-      display: grid;
-    font-family: 'Poppins', sans-serif;
+    display: grid;
+    font-family: 'Miller Text', serif;
     font-size: 27px;
-    font-weight: 700;
+    font-weight: 500;
     height: 100vh;
-      place-items: center;
+    place-items: center;
   }
 
 /* HELPERS */
@@ -200,11 +207,13 @@ a {
 
 .subheader {
     color: #999;
-    margin-top: .75em;
+    font-family: "miller-headline", serif;
     font-style: italic;
-    font-weight: 200;
-    font-size: 1.4em;
+    font-weight: 100;
+    font-size: 1.5em;
+    line-height: 1.3em;
     clear: both;
+    text-wrap: pretty;
 }
 
 /* HORIZONTAL RULES */
@@ -307,11 +316,32 @@ body {
     justify-content: center;
 }
 
+.left-side-work {
+    width: 35%;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #effaff; /* Adjust as needed */
+    justify-content: center;
+}
+
 .right-side {
     width: 50%;
     height: 100vh;
     overflow-y: auto;
     margin-left: 50%;
+    background-color: #ffffff;
+}
+
+.right-side-work {
+    width: 65%;
+    height: 100vh;
+    overflow-y: auto;
+    margin-left: 35%;
+    /* padding-left: 1.5em; */
     background-color: #ffffff;
 }
 
@@ -422,7 +452,7 @@ section
 /* SYTLING FOR BOTH HEADER AND FOOTER */
 .site-header a,
 .site-footer a {
-    color: rgba(0, 0, 0, .8);
+    color: rgba(34, 34, 34, 1);
 }
 
 .site-header a:hover,
@@ -446,7 +476,7 @@ section
 /* LOGO AREA */
 
 .site-id h1 {
-    font-family: "Comfortaa", sans-serif;
+    font-family: "Miller Text", serif;
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
@@ -462,6 +492,7 @@ section
     position: fixed;
     top: 0;
     left: 0;
+    
 }
 
 .site-nav ul {
@@ -494,7 +525,7 @@ section
     display: block;
     padding: 1em;
     color: rgba(0, 0, 0, .5);
-    font-family: "all round gothic", sans-serif;
+    font-family: "neue haas grotesk", sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
@@ -517,7 +548,7 @@ section
     display: block;
     padding: 1em;
     color: rgba(0, 0, 0, .5);
-    font-family: "all round gothic", sans-serif;
+    font-family: "neue haas grotesk", sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
@@ -629,7 +660,7 @@ section {
 
 /* Main Sections */
 section {
-    padding: 1.5em 0;
+    padding: 0;
   }
   
   /* Hero Sections */
@@ -772,12 +803,12 @@ article {
 
 .project-titletour {
     color: #604941;
-    font-family: "Permanent Marker", cursive;
-    font-weight: 400;
+    font-family: "neue haas grotesk", sans-serif;
+    font-weight: 900;
     font-style: normal;
-    font-size: 4em;
+    font-size: 2.5em;
     text-align: center;
-    margin-top: 1em;
+    margin-left: 1em;
    
 }
 
@@ -803,8 +834,10 @@ article {
 
 .ul-sub {
     list-style-type: none;
-    font-weight: 400;
-    font-size: .9em;
+    font-family: "neue-haas-grotesk-text";
+    font-weight: 500;
+    font-size: .8em;
+    color: rgb(93, 93, 93);
     
 }
 
@@ -846,10 +879,11 @@ article {
 }
 
 .eyebrow {
+    font-family: "Miller-text", sans-serif;
     font-style: normal;
-    font-weight: 500;
-    font-size: 1.1em;
-    color: #6b6b6b;
+    font-weight: 400;
+    font-size: .85em;
+    color: #8d8d8d;
     margin-bottom: 0;
 }
 
@@ -863,8 +897,9 @@ article {
 }
 
 .iteration-titletour {
+    font-family: "neue-haas-grotesk-text", sans-serif;
     font-style: italic;
-    font-weight: 500;
+    font-weight: 300;
     font-size: 1.5em;
     color: #945d4b;
     margin-top: 0;
@@ -885,6 +920,7 @@ article {
 }
 
 .intro-titletour {
+    font-family: "neue-haas-grotesk-text", sans-serif;
     font-weight: 500;
     font-size: 1.3em;
     color: #945d4b;
@@ -903,9 +939,9 @@ article {
     margin-top: 3em;
     margin-bottom: .5em;
     font-weight: 700;
-    font-size: 2em;
-    font-family: "Permanent Marker", cursive;
-    font-weight: 400;
+    font-size: 1.2em;
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-weight: 700;
     font-style: normal;
 }
 
@@ -969,22 +1005,25 @@ article {
 }
 
 .backtotop {
-    color:#576D61;
     text-align: center;
-    margin-top: 4em;
+    margin-top: 1em;
+    margin-bottom: .4em;
     font-size: 1em;
-    font-family: "Permanent Marker", cursive;
-    font-weight: 400;
+    color: rgba(0, 0, 0, .5);
+    font-family: "neue haas grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
     font-style: normal;
 }
 
 .backtotop2 {
-    color:#8c8c8c;
     text-align: center;
     margin-top: 1em;
     font-size: 1em;
-    font-family: "Permanent Marker", cursive;
-    font-weight: 400;
+    color: rgba(0, 0, 0, .5);
+    font-family: "neue haas grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
     font-style: normal;
 }
 

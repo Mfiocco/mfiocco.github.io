@@ -333,7 +333,7 @@ body {
     height: 100vh;
     overflow-y: auto;
     margin-left: 50%;
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
 }
 
 .right-side-work {
@@ -848,7 +848,7 @@ article {
 
 .about-intro {
     color: #6f6f6f;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Neue-haas-grotesk-text", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 1.2em;
@@ -858,8 +858,9 @@ article {
 .ul-about {
     margin: 0;
     list-style-type: none;
+    font-family: "Neue-haas-grotesk-text", sans-serif;
     font-weight: 400;
-    font-size: .9em;
+    font-size: .7em;
     line-height: 2em;
     list-style-type: none;
 }
@@ -867,15 +868,16 @@ article {
 .contact {
     margin-top: 2em;
     color: #416178;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Neue-haas-grotesk-display", sans-serif;
     font-weight: 600;
     font-style: normal;
     font-size: 1.5em
 }
 
 .chat-styling {
+    font-family: "Neue-haas-grotesk-display", sans-serif;
     font-style: italic;
-    font-weight: 100;
+    font-weight: 400;
 }
 
 .eyebrow {
@@ -1127,23 +1129,23 @@ img.vert-move {
 /* PARALLAX */
 
 .parallax-section {
-    min-height: 500px;
-    background-color: rgb(233, 233, 233);
+    /* min-height: 50svh; */
+    height: 50%;
+    /* background-color: rgb(233, 233, 233); */
     background-attachment: fixed;
-    background-position-y: -0.2;
-    background-repeat: no-repeat;
-    background-position: center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+    /* background-repeat: no-repeat; */
+    background-position: right center;
+    background-size: auto 100%;
     text-align: center;
     color: white;
-    transition: 0s linear;
-    transition-property: background-position;
+    border: 2px solid green;
+    /* position: relative; */
   }
+
   
-  #parallax {
+  
+  #parallax1 {
+    /* background-image: url(../img/split-image.jpg); */
     background-image: url(../img/Tourism_Image.jpg);
    
   }
@@ -1183,6 +1185,31 @@ img.vert-move {
   }
 
   
-  #section-container {
-    padding-top: 16%
+  .section-container {
+    padding: 0;
+    height: 100%;
+    position: relative;
+  }
+
+  .section-container h2 {
+    margin: 0;
+    height: 100%;
+  }
+
+  .section-container a {
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    
+
+  }
+
+  .puerto-vid {
+    display: grid;
+    place-items: center;
   }

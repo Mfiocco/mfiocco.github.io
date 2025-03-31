@@ -67,11 +67,23 @@ h1 {
     line-height: 1;
 }
 
-h2 {
-    font-size: 2em;
-    font-weight: 400;
+.parallax-section h2 {
+    font-size: 1.5em;
     /* 36px / 16px = 2.25em */
-    line-height: 1.5;
+    line-height: 2;
+    color: white;
+    font-family: "neue-haas-grotesk" sans-serif;
+    font-weight: 300;
+    letter-spacing: .75em;
+}
+
+h2 {
+    font-size: 1.5em;
+    /* 36px / 16px = 2.25em */
+    line-height: 1.75;
+    color: white;
+    font-family: "neue-haas-grotesk" sans-serif;
+    font-weight: 300;
 }
 
 h3 {
@@ -137,11 +149,12 @@ em {
 }
 
 a:hover {
-    color:#7a9787;
+    color: #7a9787;
     text-decoration: underline;
 } */
 
 a {
+    color: white;
     background-image: linear-gradient(to right,
             #7c9fab,
             #31505b 50%,
@@ -180,7 +193,7 @@ a:hover::before {
 body {
     display: grid;
     font-family: 'Miller Text', serif;
-    font-size: 27px;
+    font-size: 1em;
     font-weight: 500;
     height: 100vh;
     place-items: center;
@@ -216,7 +229,7 @@ body {
     line-height: 1.3em;
     clear: both;
     text-wrap: pretty;
-    padding-right: 2em;
+    padding: 2em;
 }
 
 /* HORIZONTAL RULES */
@@ -313,50 +326,72 @@ body {
     padding: 0 1em;
 }
 
-
-
-.left-side {
-    width: 50%;
-    height: 100vh;
-    position: fixed;
-    left: 0;
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    background-color: #ffffff;
-    /* Adjust as needed */
-    justify-content: center;
+@media (min-width: 1400px) {
+    .row-project-detail {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
-.left-side-work {
-    width: 35%;
-    height: 100vh;
-    position: fixed;
-    left: 0;
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    background-color: #ffffff;
-    /* Adjust as needed */
-    justify-content: center;
+@media (min-width: 768px) {
+    .left-side {
+        width: 50%;
+        height: 100vh;
+        position: fixed;
+        left: 0;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        background-color: #ffffff;
+        justify-content: center;
+    }
+
+    .project-page {
+        overflow-x: hidden;
+
+    }
+
+    .project-page-2-column {
+        display: flex;
+        align-items: flex-start;
+
+
+    }
+
+    .left-side-work {
+        position: sticky;
+        top: 0;
+        /* background-color: pink; */
+        min-height: 100svh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    .right-side-work {
+        /* background-color: yellow; */
+
+    }
+
+    .right-side {
+        width: 50%;
+        height: 100vh;
+        overflow-y: auto;
+        margin-left: 50%;
+    }
 }
 
-.right-side {
-    width: 50%;
-    height: 100vh;
-    overflow-y: auto;
-    margin-left: 50%;
-    /* background-color: #ffffff; */
+.work-section-color {
+    background-color: rgb(255, 235, 199);
 }
 
-.right-side-work {
-    width: 65%;
-    height: 100vh;
-    overflow-y: auto;
-    margin-left: 35%;
-    /* padding-left: 1.5em; */
-    background-color: #ffffff;
+.work-mockups {
+    display: grid;
+    place-items: center;
 }
+
+
 
 .section-bg {
     background-color: rgb(253, 251, 251);
@@ -497,6 +532,16 @@ section .container {
     padding: 10px;
 }
 
+.site-footer-work {
+    display: inline-block;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: transparent;
+    color: #fff;
+    padding: 10px;
+}
+
 /* LOGO AREA */
 
 .site-id h1 {
@@ -542,6 +587,7 @@ section .container {
 .site-nav li:nth-child(1) {
     background-color: white;
     border-bottom-right-radius: 30%;
+    border-bottom-left-radius: 30%;
 }
 
 .site-nav li:nth-child(2) {
@@ -592,6 +638,7 @@ section {
     padding: 3em 0;
 }
 
+
 /* HERO */
 
 .hero {
@@ -599,9 +646,9 @@ section {
     color: #373737;
     text-align: center;
     padding: 1em 0 1em 0;
-    /* border-top: none; */
-
-    /* margin-bottom: 1.5em; */
+    height: 60svh;
+    flex-direction: column;
+    justify-content: center;
 
 }
 
@@ -615,12 +662,14 @@ section {
     padding-bottom: 3em;
 }
 
+
 .hero h1 {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 0;
+    margin-bottom: 0em;
     margin-top: 0em;
+    padding-bottom: 0.1em;
 }
 
 .hero p {
@@ -718,10 +767,10 @@ section {
 
 .hero h1,
 .hero h2 {
-    font-family: "Neue Haas Grotesk", sans-serif;
+    font-family: "Miller", serif;
     font-weight: 100;
-    font-style: normal;
-    font-size: 3em;
+    font-style: italic;
+    font-size: 4em;
     line-height: 1.1em;
     max-width: 15em;
     padding-top: 0em;
@@ -815,12 +864,14 @@ article p+h6 {
 
 .main-hero,
 h5 {
-    font-family: "Comfortaa", sans-serif;
+    font-family: "neue-haas-grotesk", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 300;
+    font-weight: 100;
     font-style: normal;
     font-size: 1em;
     margin-bottom: 1.5em;
+    letter-spacing: .4em;
+
 }
 
 #work .row {
@@ -855,6 +906,7 @@ h5 {
     font-size: 4em;
     text-align: center;
     margin-top: 1em;
+    text-wrap: pretty;
 }
 
 .project-titletour {
@@ -864,7 +916,8 @@ h5 {
     font-style: normal;
     font-size: 2.5em;
     text-align: center;
-    margin-left: 1em;
+    text-wrap: pretty;
+    margin-left: .5em;
 
 }
 
@@ -876,6 +929,7 @@ h5 {
     font-size: 4em;
     text-align: center;
     margin-top: 1em;
+    text-wrap: pretty;
 }
 
 .project-titlek9 {
@@ -886,6 +940,11 @@ h5 {
     font-size: 4em;
     text-align: center;
     margin-top: 1em;
+    text-wrap: pretty;
+}
+
+.angelinas-jars {
+    padding-top: 10em;
 }
 
 .ul-sub {
@@ -903,7 +962,7 @@ h5 {
 }
 
 .about-intro {
-    color: #6f6f6f;
+    color: #ffffff;
     font-family: "Neue-haas-grotesk-text", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -911,19 +970,25 @@ h5 {
     margin-bottom: .5em;
 }
 
+.about-me {
+    color: white;
+    padding: .4em;
+}
+
 .ul-about {
+    color: white;
     margin: 0;
     list-style-type: none;
     font-family: "Neue-haas-grotesk-text", sans-serif;
     font-weight: 400;
-    font-size: .7em;
+    font-size: 1em;
     line-height: 2em;
     list-style-type: none;
 }
 
 .contact {
     margin-top: 2em;
-    color: #416178;
+    color: #ffffff;
     font-family: "Neue-haas-grotesk-display", sans-serif;
     font-weight: 600;
     font-style: normal;
@@ -1069,6 +1134,8 @@ h5 {
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
+    /* display: inline-block;
+    justify-content: space-between; */
 }
 
 .seemore-projects {
@@ -1303,9 +1370,7 @@ fade-in {
 }
 
 
-
 #parallax1 {
-    /* background-image: url(../img/split-image.jpg); */
     background-image: url(../img/Tourism_Image.jpg);
 
 }
@@ -1379,4 +1444,51 @@ fade-in {
     padding: 4em 0 5em 0;
     display: grid;
     place-items: center;
+}
+
+.about-section {
+    background-color: teal;
+    background-image: url(../img/about-surf.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    /* opacity: 0.6;
+    filter: blur(1); */
+}
+
+.words {
+    border: 3px solid rgb(255, 255, 255);
+    padding: 3em;
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 100;
+}
+
+.highlighted-projects,
+h1 {
+    padding-top: 1em;
+    padding-bottom: .5em;
+    /* border: 1px solid red; */
+    text-align: center;
+    font-family: 'neue-haas-grotesk', sans-serif;
+    font-size: 1em;
+    font-weight: 900;
+    letter-spacing: 0em;
+}
+
+.card-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.5em;
 }

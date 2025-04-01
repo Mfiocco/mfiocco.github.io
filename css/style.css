@@ -142,6 +142,30 @@ em {
     font-style: italic;
 }
 
+/* RESPONSIVE TYPOGRAPHY VIA MEDIA QUERIES */
+
+/* SMALL SCREENS (Mobile < 768px) */
+body {
+    /* SET THE DEFAULT FONT SIZE TO 14px */
+    font-size: 87.5%;
+}
+
+/* MEDIUM SCREENS (Tablets < 1200px) */
+@media (min-width: 768px) {
+    body {
+        /* SET THE MEDIUM SCREENS AND HIGHER FONT SIZE TO 16px */
+        font-size: 100%;
+    }
+}
+
+/* LARGE SCREENS (Laptops & Desktops > 1200px) */
+@media (min-width: 1200px) {
+    body {
+        /* SET THE LARGE SCREENS AND HIGHER FONT SIZE TO 18px */
+        font-size: 112.5%;
+    }
+}
+
 /* LINKS */
 /* a {
     color: rgb(0, 0, 0);
@@ -161,8 +185,8 @@ a {
             #252525 50%);
     background-size: 200% 100%;
     background-position: -100%;
-    display: inline-block;
-    padding: 5px 0;
+    /* display: inline-block; */
+    /* padding: 5px 0; */
     position: relative;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -191,12 +215,12 @@ a:hover::before {
 
 /* Presentational Styles */
 body {
-    display: grid;
+    /* display: grid; */
     font-family: 'Miller Text', serif;
     font-size: 1em;
     font-weight: 500;
-    height: 100vh;
-    place-items: center;
+    /* height: 100vh; */
+    /* place-items: center; */
 }
 
 /* HELPERS */
@@ -280,13 +304,14 @@ form input[type=submit] {
 
 button.alt,
 a.button.alt {
-    font-family: "Comfortaa", sans-serif;
-    font-optical-sizing: auto;
+    font-family: "neue-haas-grotesk", sans-serif;
     font-weight: 400;
     font-style: normal;
     background-color: transparent;
     border: 1.75px solid rgba(0, 0, 0, 0.25);
     color: #576D61;
+    margin-bottom: 5em;
+
 }
 
 button:hover,
@@ -386,11 +411,14 @@ body {
     background-color: rgb(255, 235, 199);
 }
 
-.work-mockups {
+/* .work-mockups {
     display: grid;
     place-items: center;
+} */
+.groov-section {
+    padding-top: 10em;
+    padding-bottom: 5em;
 }
-
 
 
 .section-bg {
@@ -423,6 +451,153 @@ body {
 }
 
 /* GRID */
+
+@media (min-width: 768px) {
+    .row {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: var(--gridgap);
+    }
+
+    /* COMMONLY USED SEMANTIC COLUMN WIDTHS */
+    .one-half {
+        grid-column: auto / span 6;
+    }
+
+    .one-third {
+        grid-column: auto / span 4;
+    }
+
+    .two-thirds {
+        grid-column: auto / span 8;
+    }
+
+    .one-fourth {
+        grid-column: auto / span 3;
+    }
+
+    .three-fourths {
+        grid-column: auto / span 9;
+    }
+
+    /* 12 COLUMN CLASSES */
+    .col-1 {
+        grid-column: auto / span 1;
+    }
+
+    .col-2 {
+        grid-column: auto / span 2;
+    }
+
+    .col-3 {
+        grid-column: auto / span 3;
+    }
+
+    .col-4 {
+        grid-column: auto / span 4;
+    }
+
+    .col-5 {
+        grid-column: auto / span 5;
+    }
+
+    .col-6 {
+        grid-column: auto / span 6;
+    }
+
+    .col-7 {
+        grid-column: auto / span 7;
+    }
+
+    .col-8 {
+        grid-column: auto / span 8;
+    }
+
+    .col-9 {
+        grid-column: auto / span 9;
+    }
+
+    .col-10 {
+        grid-column: auto / span 10;
+    }
+
+    .col-11 {
+        grid-column: auto / span 11;
+    }
+
+    .col-12 {
+        grid-column: auto / span 12;
+    }
+
+    /* COMMONLY CENTERED COLUMNS */
+    .one-half.centered {
+        grid-column: 4 / span 6;
+    }
+
+    .one-third.centered {
+        grid-column: 5 / span 4;
+    }
+
+    .two-thirds.centered {
+        grid-column: 3 / span 8;
+    }
+
+    /* PUSHES */
+    .push-1 {
+        grid-column-start: 2;
+    }
+
+    .push-2 {
+        grid-column-start: 3;
+    }
+
+    .push-3 {
+        grid-column-start: 4;
+    }
+
+    .push-4 {
+        grid-column-start: 5;
+    }
+
+    .push-5 {
+        grid-column-start: 6;
+    }
+
+    .push-6 {
+        grid-column-start: 7;
+    }
+
+    .push-7 {
+        grid-column-start: 8;
+    }
+
+    .push-8 {
+        grid-column-start: 9;
+    }
+
+    .push-9 {
+        grid-column-start: 10;
+    }
+
+    .push-10 {
+        grid-column-start: 11;
+    }
+
+    .push-11 {
+        grid-column-start: 12;
+    }
+
+    /* SWAP (REVERSE) COLUMNS -WORKS w/ ONLY 2 CHILDREN  */
+    .row.swapped>*:first-child {
+        order: 2;
+    }
+
+    .row.swapped>*:last-child {
+        order: 1;
+    }
+
+}
+
 section .container {
     overflow-x: hidden;
 }
@@ -558,9 +733,11 @@ section .container {
 /* SITE NAV */
 .site-nav {
     width: 100%;
-    position: fixed;
+    /* position: fixed; */
+    position: absolute;
     top: 0;
     left: 0;
+    z-index: 100;
 
 }
 
@@ -709,8 +886,8 @@ section {
     }
 
     .toggle-nav .site-nav ul {
-        display: block;
-        text-align: right;
+        /* display: block;
+        text-align: right; */
     }
 
     .toggle-nav .site-nav a:hover {
@@ -720,8 +897,8 @@ section {
     }
 
     .toggle-nav[data-navstate="closed"] ul {
-        height: 0;
-        overflow: hidden;
+        /* height: 0;
+        overflow: hidden; */
 
     }
 
@@ -898,6 +1075,16 @@ h5 {
 
 }
 
+.final-groovlogo {
+    margin: 0;
+    padding: 0 0 6em 0;
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+
+}
+
 .project-titlecorp {
     color: #576D61;
     font-family: "Permanent Marker", cursive;
@@ -945,6 +1132,12 @@ h5 {
 
 .angelinas-jars {
     padding-top: 10em;
+}
+
+.full-width-images img,
+.full-width-image {
+    max-width: none;
+    width: 100%;
 }
 
 .ul-sub {
@@ -1011,8 +1204,17 @@ h5 {
 }
 
 .iteration-img {
-    padding: 8em .5em 0;
+    padding: 2em .5em 0;
 }
+
+/* .iteration-img {
+    display: grid;
+    place-items: center;
+    border: 1px solid red;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+} */
 
 .iteration-titlecorp {
     font-style: italic;
@@ -1354,21 +1556,24 @@ fade-in {
 }
 
 /* PARALLAX */
+@media (min-width:768px) {
 
-.parallax-section {
-    /* min-height: 50svh; */
-    height: 50%;
-    /* background-color: rgb(233, 233, 233); */
-    background-attachment: fixed;
-    /* background-repeat: no-repeat; */
-    background-position: right center;
-    background-size: auto 100%;
-    text-align: center;
-    color: white;
-    /* border: 2px solid green; */
-    /* position: relative; */
+
+    .parallax-section {
+        min-height: 50svh;
+        width: 100%;
+        /* height: 50%; */
+        /* background-color: rgb(233, 233, 233); */
+        background-attachment: fixed;
+        /* background-repeat: no-repeat; */
+        background-position: right center;
+        background-size: auto 100%;
+        text-align: center;
+        color: white;
+        /* border: 2px solid green; */
+        position: relative;
+    }
 }
-
 
 #parallax1 {
     background-image: url(../img/Tourism_Image.jpg);
@@ -1410,16 +1615,12 @@ fade-in {
 
 }
 
-
 .section-container {
-    padding: 0;
-    height: 100%;
+    min-height: 50svh;
+    display: grid;
+    place-items: center;
     position: relative;
-}
-
-.section-container h2 {
-    margin: 0;
-    height: 100%;
+    width: 100%;
 }
 
 .section-container a {
@@ -1431,9 +1632,40 @@ fade-in {
     width: 100%;
     display: grid;
     place-items: center;
+    text-align: center;
 
 
 }
+
+@media (min-width:768px) {
+    .section-container {
+        padding: 0;
+        height: 100%;
+        position: relative;
+        width: 100%;
+    }
+
+
+    .section-container h2 {
+        margin: 0;
+        height: 100%;
+    }
+
+    .section-container a {
+        display: block;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: grid;
+        place-items: center;
+
+
+    }
+}
+
+
 
 .puerto-vid {
     display: grid;
@@ -1454,6 +1686,8 @@ fade-in {
     background-size: cover;
     background-position: center;
     background-blend-mode: multiply;
+    display: grid;
+    place-items: center;
     /* opacity: 0.6;
     filter: blur(1); */
 }
@@ -1471,6 +1705,14 @@ fade-in {
     min-height: 100%;
     z-index: 100;
 }
+
+.groov-vid {
+    width: 100%;
+    height: 100%;
+    border: 1px solid red;
+}
+
+.groov-mockup-vid {}
 
 .highlighted-projects,
 h1 {

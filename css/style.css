@@ -253,7 +253,7 @@ body {
     line-height: 1.3em;
     clear: both;
     text-wrap: pretty;
-    padding: 2em;
+    /* padding: 1em; */
 }
 
 /* HORIZONTAL RULES */
@@ -270,6 +270,12 @@ img {
     max-width: 100%;
     height: auto;
     border-radius: 0em;
+}
+
+video {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 .top-nav-logo img {
@@ -391,6 +397,7 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        padding: 2em;
 
     }
 
@@ -405,6 +412,12 @@ body {
         overflow-y: auto;
         margin-left: 50%;
     }
+}
+
+.meta-info {
+    padding: 0;
+    margin-bottom: 3em;
+    mix-blend-mode: exclusion;
 }
 
 .work-section-color {
@@ -986,6 +999,10 @@ article {
     padding: 0 1em;
 }
 
+.k9-article {
+    padding-top: 5em;
+}
+
 article h1 {
     text-align: center;
     font-family: "Open Sans", sans-serif;
@@ -1075,6 +1092,13 @@ h5 {
 
 }
 
+.pull-quote {
+    margin: 0;
+    padding: 0em 0 6em 0;
+    display: grid;
+    place-items: center;
+}
+
 .final-groovlogo {
     margin: 0;
     padding: 0 0 6em 0;
@@ -1104,7 +1128,6 @@ h5 {
     font-size: 2.5em;
     text-align: center;
     text-wrap: pretty;
-    margin-left: .5em;
 
 }
 
@@ -1138,6 +1161,7 @@ h5 {
 .full-width-image {
     max-width: none;
     width: 100%;
+    display: block;
 }
 
 .ul-sub {
@@ -1146,6 +1170,9 @@ h5 {
     font-weight: 500;
     font-size: .8em;
     color: rgb(93, 93, 93);
+    min-width: 12em;
+    margin: 0;
+    padding: 0;
 
 }
 
@@ -1205,6 +1232,10 @@ h5 {
 
 .iteration-img {
     padding: 2em .5em 0;
+}
+
+.spacer {
+    padding-top: 10em;
 }
 
 /* .iteration-img {
@@ -1297,8 +1328,6 @@ h5 {
 } */
 
 
-
-
 .site-header.sticky {
     position: fixed;
     width: 100%;
@@ -1318,6 +1347,11 @@ h5 {
     /* background-color: #efefef; */
     border-bottom: 1px solid rgb(196, 196, 196);
     margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+.type-image {
+    box-shadow: 10px 10px 20px rgb(189, 189, 189);
 }
 
 .p-link {
@@ -1695,21 +1729,12 @@ fade-in {
 .words {
     border: 3px solid rgb(255, 255, 255);
     padding: 3em;
-}
-
-#myVideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: 100;
+    margin-top: 10em;
+    margin-bottom: 5em;
 }
 
 .groov-vid {
-    width: 100%;
-    height: 100%;
-    border: 1px solid red;
+    padding-bottom: 5em;
 }
 
 .groov-mockup-vid {}

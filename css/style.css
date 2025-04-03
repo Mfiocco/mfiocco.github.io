@@ -417,7 +417,7 @@ body {
 .meta-info {
     padding: 0;
     margin-bottom: 3em;
-    mix-blend-mode: exclusion;
+    /* mix-blend-mode: exclusion; */
 }
 
 .work-section-color {
@@ -727,7 +727,25 @@ section .container {
     width: 100%;
     background-color: transparent;
     color: #fff;
-    padding: 10px;
+    padding: 0em 1em 2em 1em;
+}
+
+.site-footer-work .work-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-footer-work .backtotop {
+    order: 2;
+}
+
+.site-footer-work .next {
+    order: 3;
+}
+
+.site-footer-work .prev {
+    order: 1;
 }
 
 /* LOGO AREA */
@@ -814,7 +832,8 @@ section .container {
 }
 
 .footer-nav a {
-    display: block;
+    display: flex;
+    gap: .5em;
     padding: 1em;
     color: rgba(0, 0, 0, .5);
     font-family: "neue haas grotesk", sans-serif;
@@ -822,6 +841,7 @@ section .container {
     font-weight: 300;
     font-style: normal;
 }
+
 
 /* SECTIONS */
 section {
@@ -1176,6 +1196,26 @@ h5 {
 
 }
 
+.ul-sub li {
+    display: flex;
+    gap: .5em;
+}
+
+.ul-sub .sub-icon {
+    width: 18px;
+}
+
+.nma-social-icons {
+    --nma-icons-color: rgb(0, 0, 0);
+    display: inline;
+}
+
+.nma-social-icons svg {
+    max-height: 40px;
+    margin: 1em;
+    fill: var(--nma-icons-color);
+}
+
 .about-title {
     margin-bottom: 0;
     padding-bottom: 1.7em;
@@ -1354,13 +1394,13 @@ h5 {
     box-shadow: 10px 10px 20px rgb(189, 189, 189);
 }
 
-.p-link {
+/* .p-link {
     font-weight: 500;
     font-size: 1.3em;
     margin-top: 2em;
-}
+} */
 
-.backtotop {
+.footer-anchor-link {
     text-align: center;
     margin-top: 1em;
     margin-bottom: .4em;
@@ -1373,6 +1413,8 @@ h5 {
     /* display: inline-block;
     justify-content: space-between; */
 }
+
+
 
 .seemore-projects {
     text-align: center;
@@ -1645,7 +1687,7 @@ fade-in {
 }
 
 #parallax8 {
-    background-image: url('https://images.unsplash.com/photo-1613049521055-d377898eb145?q=80&w=3590&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-image: url(../img/people-puzzling.jpg);
 
 }
 

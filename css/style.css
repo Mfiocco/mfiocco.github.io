@@ -433,6 +433,11 @@ body {
     padding-bottom: 5em;
 }
 
+.net-monster {
+    display: grid;
+    place-items: center;
+}
+
 
 .section-bg {
     background-color: rgb(253, 251, 251);

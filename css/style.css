@@ -1554,6 +1554,9 @@ body:has(.splash-screen) {
     left: 0;
     z-index: 9999;
     animation: splash-disappear 2s ease-in-out 5.3s forwards;
+    background-color: rgb(11, 56, 61);
+    background-image: url(../img/hero-still-img.jpg);
+    background-size: cover;
 }
 
 @keyframes splash-disappear {

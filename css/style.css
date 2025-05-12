@@ -305,7 +305,7 @@ video {
 
 .detail-border-footer {
     /* background-color: #efefef; */
-    border-top: 1px solid rgb(91, 91, 91);
+    border-bottom: 1px solid rgb(221, 221, 221);
 }
 
 .centered-section-title {
@@ -870,9 +870,19 @@ body {
     padding: .8em 1.5em;
     border-radius: 70px;
     margin-top: 2em;
-
 }
 
+.copyright {
+    font-family: "neue-haas-grotesk", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: .8em;
+    color: #7e7e7e;
+    /* text-align: left; */
+    padding: .5em 0 .5em 1.5em;
+    margin: 0;
+    place-items: center;
+}
 
 body {
     margin: 0;
